@@ -22,9 +22,10 @@ COPY . /app
 # Installation des dépendances et construction du projet
 ARG HOST
 ENV HOST=$HOST
+RUN echo $HOST
 
 RUN touch /app/.env && \
-    echo 'SKIP_PREFLIGHT_CHECK=true\nREACT_APP_MY_URL=$HOST' >> /app/.env
+    echo "SKIP_PREFLIGHT_CHECK=true\nREACT_APP_MY_URL=$HOST" >> /app/.env
     
 RUN cat /app/.env
 

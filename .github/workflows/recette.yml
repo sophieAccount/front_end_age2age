@@ -38,6 +38,8 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/sophieaccount/front_end_age2age:${{ github.ref_name }}
+          args:
+            HOST: https://cube.nekshor.fr:4000/
         env:
           HOST: https://cube.nekshor.fr:4000
   deploy:
