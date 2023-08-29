@@ -35,6 +35,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Commande de démarrage du service
-# CMD ["npm", "run", "start"]
-# lauch commande npm run start with pm2
-CMD ["pm2", "start", "npm", "--", "run", "start"]
+CMD ["npm", "run", "start"]
