@@ -16,7 +16,6 @@ jobs:
   #         npm run build
   build-and-push-image:
     runs-on: ubuntu-latest
-    env:
     # needs: [build]
     # if: github.ref_name == 'main'
     permissions:
