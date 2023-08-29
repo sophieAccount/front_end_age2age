@@ -25,7 +25,7 @@ function Connexion() {
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let response = await fetch(`https://${useAuthContext}/users/authenticate`, {
+            let response = await fetch(`https://${config}/users/authenticate`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
