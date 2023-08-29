@@ -32,7 +32,9 @@ RUN npm run build
 
 
 # Exposition du port
-EXPOSE 3001
+EXPOSE 3000
 
 # Commande de démarrage du service
-CMD ["npm", "run", "start"]
+# CMD ["npm", "run", "start"]
+# lauch commande npm run start with pm2
+CMD ["pm2", "start", "npm", "--", "run", "start"]
