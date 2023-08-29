@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "../../Style/EditAdvert.css";
 import Advert from './Advert';
+import { useAuthContext } from "../../Context/AuthProvider";
 
 function EditAdvert() {
 
     const [data, setAdvert] = useState([]);
     const token = localStorage.getItem('auth').replace(/"/g, '');
     const userId = localStorage.getItem('userId').replace(/"/g, '');
+    const { config } = useAuthContext();
 
     useEffect(() => {
         const headers = { 'Authorization': `Bearer ${token}` };
-        fetch(`http://${process.env.REACT_APP_MY_URL}/adverts/user/${userId}`, { headers })
+        fetch(`https://${config}/adverts/user/${userId}`, { headers })
             .then((res) => res.json())
             .then((data) => setAdvert(data));
     }, []);

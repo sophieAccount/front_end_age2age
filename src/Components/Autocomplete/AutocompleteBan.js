@@ -18,7 +18,7 @@ class AutocompleteBan extends React.Component {
         const maxResults = this.props.maxResults || 7
         const minCharacters = this.props.minCharacters || 4
         if (query.length < minCharacters) return;
-        const banRequest = new Request('http://api-adresse.data.gouv.fr/search/?q=' + query + '&limit=' + maxResults);
+        const banRequest = new Request('https://api-adresse.data.gouv.fr/search/?q=' + query + '&limit=' + maxResults);
         fetch(banRequest)
             .then((response) => {
                 return response.json()

@@ -11,6 +11,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { useAuthContext } from "../../Context/AuthProvider";
 
 
 function Inscription(event) {
@@ -45,12 +46,12 @@ function Inscription(event) {
 
     const navigation = useNavigate();
     const htmlspecialchars = require('htmlspecialchars');
-
+    const { config } = useAuthContext();
 
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let res = await fetch(`http://${process.env.REACT_APP_MY_URL}/users/register`, {
+            let res = await fetch(`https://${config}/users/register`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

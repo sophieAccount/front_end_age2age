@@ -1,10 +1,12 @@
 import axios from "axios";
+import { useAuthContext } from "./Context/AuthProvider";
+import {api_url} from './env/config.js'
 
 const token = localStorage.getItem('auth') ? localStorage.getItem('auth').replace(/"/g, '') : ''
 export default axios.create(
   {
 
-    baseURL: `http://${process.env.REACT_APP_MY_URL}`,
+    baseURL: `https://${api_url}`,
     headers: {
       "Content-type": "application/json",
       'Authorization': `Bearer ${token}`

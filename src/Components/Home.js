@@ -6,12 +6,14 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo from '../image/logo.png';
+import { useAuthContext } from "../Context/AuthProvider";
 
 function Home() {
     const [data, setAdvert] = useState([]);
+    const { config } = useAuthContext();
 
     useEffect(() => {
-        fetch(`http://${process.env.REACT_APP_MY_URL}/adverts`)
+        fetch(`https://${config}/adverts`)
             .then((res) => res.json())
             .then((resData) => setAdvert(resData));
     }, []);

@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col';
 function Admin(props) {
 
     const user = useAuthContext();
-
+    const { config } = useAuthContext();
     const [activeTab, setActiveTab] = useState("users");
 
     const handleTabClick = (tab) => {
@@ -21,13 +21,13 @@ function Admin(props) {
 
 
     useEffect(() => {
-        fetch(`http://${process.env.REACT_APP_MY_URL}/comments/comment/validate`)
+        fetch(`https://${config}/comments/comment/validate`)
             .then((res) => res.json())
             .then((comment) => setCommentCount(comment));
     }, []);
 
     useEffect(() => {
-        fetch(`http://${process.env.REACT_APP_MY_URL}/adverts/advert/validate`)
+        fetch(`https://${config}/adverts/advert/validate`)
             .then((res) => res.json())
             .then((data) => setAdvertCount(data));
     }, []);

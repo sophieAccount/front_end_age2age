@@ -20,11 +20,12 @@ function Connexion() {
     const [errorEmpty, setErrorEmpty] = useState("");
 
     const navigation = useNavigate();
+    const { config } = useAuthContext();
 
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let response = await fetch(`http://${process.env.REACT_APP_MY_URL}/users/authenticate`, {
+            let response = await fetch(`https://${useAuthContext}/users/authenticate`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

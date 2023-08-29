@@ -8,10 +8,11 @@ function Advert(props) {
     const [data, deleteData] = useState([]);
     const user = useAuthContext
     const token = localStorage.getItem('auth') ? localStorage.getItem('auth').replace(/"/g, '') : '';
+    const { config } = useAuthContext();
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let res = await fetch(`http://${process.env.REACT_APP_MY_URL}/adverts/${advert_id}`, {
+            let res = await fetch(`https://${config}/adverts/${advert_id}`, {
                 method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json',

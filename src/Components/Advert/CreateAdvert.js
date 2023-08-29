@@ -34,12 +34,13 @@ function CreateAdvert(props) {
 
     const user = useContext(AuthContext);
     const token = localStorage.getItem('auth').replace(/"/g, '');
+    const { config } = useAuthContext();
 
     let handleSubmit = async (e) => {
         e.preventDefault();
         var status = 0;
         try {
-            let res = await fetch(`http://${process.env.REACT_APP_MY_URL}/adverts`, {
+            let res = await fetch(`https://${config}/adverts`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -106,7 +107,7 @@ function CreateAdvert(props) {
 
     const [categories, setCategories] = useState([]);
     const getCategory = useEffect(() => {
-        fetch(`http://${process.env.REACT_APP_MY_URL}/categories`)
+        fetch(`https://${config}/categories`)
             .then((res) => res.json())
             .then((categories) => setCategories(categories));
     }, []);

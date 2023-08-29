@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import "../../Style/OneAdvert.css";
 import AutocompleteBan from "../Autocomplete/AutocompleteBan";
-import { AuthContext } from "../../Context/AuthProvider";
+import { AuthContext, useAuthContext } from "../../Context/AuthProvider";
 
 const htmlSpecialChars = require('htmlspecialchars');
 
@@ -13,9 +13,10 @@ function OneAdvert(props) {
     const [data, setAdvert] = useState([]);
 
     const user = useContext(AuthContext);
+    const { config } = useAuthContext();
 
     useEffect(() => {
-        fetch(`http://${process.env.REACT_APP_MY_URL}/adverts/${advert_id}`)
+        fetch(`https://${useAuthContext}/adverts/${advert_id}`)
             .then((res) => res.json())
             .then((data) => setAdvert(data));
     }, []);
@@ -40,7 +41,7 @@ function OneAdvert(props) {
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let res = await fetch(`http://${process.env.REACT_APP_MY_URL}/adverts/${advert_id}`, {
+            let res = await fetch(`https://${useAuthContext}/adverts/${advert_id}`, {
                 method: "PUT",
                 headers: {
                     'Content-Type': 'application/json',
@@ -88,7 +89,7 @@ function OneAdvert(props) {
 
     const [categories, setCategories] = useState([]);
     const getCategory = useEffect(() => {
-        fetch(`http://${process.env.REACT_APP_MY_URL}/categories`)
+        fetch(`https://${useAuthContext}/categories`)
             .then((res) => res.json())
             .then((categories) => setCategories(categories));
     }, []);

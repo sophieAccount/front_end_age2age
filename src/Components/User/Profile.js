@@ -44,12 +44,12 @@ function Profile() {
     const [wrongPhoneNumber, setWrongPhoneNumber] = useState('');
 
     const [ignored, fctMiseAJour] = useReducer(x => x + 1, 0);
-
+    const { config } = useAuthContext();
 
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let res = await fetch(`http://${process.env.REACT_APP_MY_URL}/users/${userData.user_id}`, {
+            let res = await fetch(`https://${config}/users/${userData.user_id}`, {
                 method: "PUT",
                 headers: {
                     'Content-Type': 'application/json',

@@ -10,7 +10,7 @@ import { Routes, Route } from "react-router-dom";
 import CategoriesList from "../Components/Categories/Categories-List";
 import AddCategory from "../Components/Categories/AddCategory";
 import OneCategory from "../Components/Categories/OneCategory";
-import { AuthContext } from "../Context/AuthProvider";
+import { AuthContext, useAuthContext } from "../Context/AuthProvider";
 import UpdateCategory from "../Components/Categories/UpdateCategory";
 import Admin from "../Components/Admin";
 import EditAdvert from "../Components/Advert/EditAdvert";
@@ -45,12 +45,13 @@ function AllRoutes() {
     const [data, setUserData] = useState({});
     const [userId, setUserId] = useState({});
 
+    const { config } = useAuthContext();
 
     const fetchCurrentUser = async () => {
         const token = localStorage.getItem("auth") ? localStorage.getItem("auth").replace(/"/g, '') : '';
         const userId = localStorage.getItem("userId") ? localStorage.getItem("userId").replace(/"/g, '') : '';
         const headers = { 'Authorization': `Bearer ${token}` };
-        let response = await fetch(`http://${process.env.REACT_APP_MY_URL}/users/${userId}`, { headers })
+        let response = await fetch(`https://${config}/users/${userId}`, { headers })
         response = await response.json();
         setUserData(response);
         setToken(token);

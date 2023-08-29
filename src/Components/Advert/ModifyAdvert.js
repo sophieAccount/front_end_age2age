@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import "../../Style/ModifyAdvert.css";
 import AutocompleteBan from "../Autocomplete/AutocompleteBan";
-import { AuthContext } from "../../Context/AuthProvider";
+import { AuthContext, useAuthContext } from "../../Context/AuthProvider";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -26,9 +26,10 @@ function ModifyAdvert(props) {
     const navigation = useNavigate();
 
     const user = useContext(AuthContext);
+    const { config } = useAuthContext();
 
     useEffect(() => {
-        fetch(`http://${process.env.REACT_APP_MY_URL}/adverts/${advert_id}`)
+        fetch(`https://${config}/adverts/${advert_id}`)
             .then((res) => res.json())
             .then((data) => setAdvert(data));
     }, []);
@@ -57,7 +58,7 @@ function ModifyAdvert(props) {
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            let res = await fetch(`http://${process.env.REACT_APP_MY_URL}/adverts/${advert_id}`, {
+            let res = await fetch(`https://${config}/adverts/${advert_id}`, {
                 method: "PUT",
                 headers: {
                     'Content-Type': 'application/json',
@@ -128,7 +129,7 @@ function ModifyAdvert(props) {
 
     const [categories, setCategories] = useState([]);
     const getCategory = useEffect(() => {
-        fetch(`http://${process.env.REACT_APP_MY_URL}/categories`)
+        fetch(`https://${config}/categories`)
             .then((res) => res.json())
             .then((categories) => setCategories(categories));
     }, []);

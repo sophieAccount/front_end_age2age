@@ -4,7 +4,7 @@ function User() {
     const [data, setUser] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/users")
+        fetch("https://localhost:3000/users")
             .then((res) => res.json())
             .then((data) => setUser(data));
     }, []);

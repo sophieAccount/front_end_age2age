@@ -1,13 +1,13 @@
 import React, {  } from "react";
 import "../Style/ResponseAdvert.css";
 import Message from './Message';
-
+import { useAuthContext } from "../Context/AuthProvider";
 function ResponseAdvert() {
-
+    const { config } = useAuthContext();
     // const [adverts, setMessage] = useState("");
-
+    // const { config } = useAuthContext();
     // useEffect(() => {
-    //     fetch("http://${process.env.REACT_APP_MY_URL}/messages/getAll")
+    //     fetch("https://${config}/messages/getAll")
     //     .then((res) => res.json())
     //     .then((res) => {
     //         setMessage(res.adverts);
