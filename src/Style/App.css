@@ -1,0 +1,140 @@
+.App {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+.App .age2age {
+  font-family: 'Arvo', serif;
+
+}
+
+.App .Home {
+  min-height: 80vh;
+  margin: 0;
+}
+
+.App .view {
+  min-height: 75vh;
+  margin: 0;
+  background-color: #F7F1E5;
+}
+
+.App .ellipsis {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+}
+
+.App .textNavBar {
+  color: #655b3e;
+}
+
+.container {
+  margin-top: 2rem;
+  /* min-height: 100vh; */
+  /* min-height: 100vh; */
+}
+
+.navbarContainer {
+  position: fixed;
+  bottom: auto;
+  top: 0;
+  width: 100%;
+  background-color: #a8d7ae;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.App .searchBar {
+  justify-content: center;
+  background-color: #CCD5AE;
+}
+
+.App .categories{
+  background-color: #CCD5AE;
+}
+
+:root {
+  margin: 0;
+  padding: 0;
+}
+
+.App h1 {
+  padding: 1rem;
+}
+
+.App .flex {
+  align-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App #AdvertDetail {
+  border: 1px solid grey;
+  border-radius: 2rem;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 0px;
+    margin-bottom: 250px;
+  }
+
+  .navbarContainer {
+    bottom: 0;
+    top: auto;
+  }
+
+}
+
+.message {
+  color: #a14232;
+  font-weight: 900;
+  font-size: 0.8em;
+}
+
+.App .buttonColor{
+  background-color: #CCD5AE;
+}

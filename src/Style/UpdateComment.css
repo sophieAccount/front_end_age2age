@@ -1,0 +1,8 @@
+#UpdateComment .form-group{
+    width: 100%;
+    text-align: center;
+}
+
+#UpdateComment button{
+    margin: 10px;
+  }

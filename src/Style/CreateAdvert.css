@@ -1,0 +1,57 @@
+/* form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+  } */
+  
+  /* label {
+    margin-top: 10px;
+    font-weight: bold;
+    width: 70%;
+  }
+   */
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  button[type="submit"] {
+    background-color:  #E9EDC9;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    color: black;
+  }
+  
+  button[type="submit"]:hover {
+    background-color:  #E9EDC9;
+  }
+  
+  .createAdvertText {
+    font-size: 18px;
+    border: none;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  form .check{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }

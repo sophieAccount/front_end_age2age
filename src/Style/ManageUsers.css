@@ -1,0 +1,8 @@
+.ManageUsers thead tr{
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.ManageUsers table{
+    width: 100%;
+}

@@ -1,0 +1,28 @@
+.OneAdvert .mid{
+  width: 50%;
+}
+
+.OneAdvert .entete{
+  display: flex;
+}
+
+
+.OneAdvert .contenu{
+  display: flex;
+}
+
+.OneAdvert img{
+  width: 100%;
+}
+
+.OneAdvert h1, h2, h3, p{
+}
+
+.OneAdvert p {
+  margin: 20px;
+  font-size: 1.5em;
+}
+
+.OneAdvert .min{
+  font-size: 1em;
+}

@@ -1,0 +1,164 @@
+.advert-one .content {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .advert-one .img, .advert-one .info{
+    width: 50%;
+    padding: 0px 40px;
+  }
+  
+  .advert-one .info p{
+    text-align: left;
+  }
+  
+  .advert-one .info .description{
+    min-height: 200px;
+  }
+  
+  .advert-one .title{
+    text-align: left;
+  }
+  
+  .advert-one img{
+    height: 100%;
+  }
+  
+  .advert-one .title .infos{
+    padding: 0px 40px;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  p {
+    margin-top: 10px;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+  
+  .advert-one .img{
+    text-align: left;
+  
+  }
+  
+  .infos-top{
+    display: flex;
+  }
+  
+  .infos-top .title, .infos-top .user{
+    width: 100%;
+    padding: 0px 40px;
+  
+  }
+  
+  .infos-top .title{
+    
+  }
+  
+  .infos-top .user{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.2em;
+  }
+  
+  .infos-top .user img{
+    height: 60px;
+    width: 60px;
+    border-radius: 5000000px;
+  }
+  
+  .infos-top .user p, .infos-top .user img{
+    margin: 0px;
+  }
+  
+  .advert-one:hover {
+  }
+  
+  .advert-one:active {
+  }
+  
+  @media screen and (max-width: 768px) {
+    .advert-one {
+      padding: 10px;
+      flex-direction: column;
+      margin: 20px auto;
+      width: 90%;
+  
+    }
+  
+    img {
+      margin-top: 5px;
+    }
+  
+    .advert-one .img, .advert-one .info{
+      width: 100%;
+    }
+  }
+  
+  
+  .advert-actions {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .favourite-button,
+  .select-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .favourite-button:hover,
+  .select-button:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #fff;
+  }
+  
+  .favourite-button:focus,
+  .select-button:focus {
+    outline: none;
+  }
+  
+  .favourite-button:active,
+  .select-button:active {
+    background-color: #fff;
+    color: #333;
+    border-color: #333;
+  }
+  
+  .favourite-button[disabled],
+  .select-button[disabled] {
+    opacity: 0.5;
+    cursor: default;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .advert-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .favourite-button,
+    .select-button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  

@@ -1,0 +1,18 @@
+.boutonAppli{
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    margin: 5px;
+}
+
+.boutonAppli:hover{
+    background-color: #333;
+    color: #fff;
+    border-color: #fff;
+}

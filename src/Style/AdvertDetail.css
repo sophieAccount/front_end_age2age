@@ -1,0 +1,38 @@
+#AdvertDetail .form-group{
+    width: 100%;
+}
+
+#AdvertDetail p {
+    font-size: 1.5em;
+}
+
+/* #AdvertDetail label{
+    width: 20%;
+} */
+
+#AdvertDetail .text{
+    display: inline;
+    margin: 0 30px;
+}
+
+#AdvertDetail form{
+    width: 100%;
+}
+
+.image{
+    background-color: grey;
+}
+
+.Commentreceive{
+
+}
+
+.Commentreceive p{
+    text-align: left;
+    font-size: 1em;
+    margin: 10px;
+}
+
+.Commentreceive .note{
+    color: darkgoldenrod;
+}

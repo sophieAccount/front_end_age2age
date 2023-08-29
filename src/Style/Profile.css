@@ -1,0 +1,85 @@
+/* .profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+} */
+
+.profile label{
+  width: 100%;
+}
+
+.avatar-container {
+  position: relative;
+}
+
+.avatar-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.parent-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.parent-div:hover {
+  opacity: 1;
+}
+
+.btn-upload {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profileText {
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #000;
+}
+
+
+@media (max-width: 768px) {
+  .profile{
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .profileText{
+    width: 90%;
+    
+  }
+}

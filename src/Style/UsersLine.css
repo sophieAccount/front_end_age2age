@@ -1,0 +1,11 @@
+.UsersLine .role{
+    min-width: 100px;
+}
+
+.UsersLine .role select{
+    width: 100%;
+}
+
+.UsersLine form{
+    display: block!important;
+}

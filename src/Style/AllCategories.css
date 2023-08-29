@@ -1,0 +1,25 @@
+.AllCategoriesDiv{
+    width: 30%;
+    margin: 10px;
+}
+
+.AllCategories{
+    width: 100%;
+}
+
+.AllCategoriesDiv .card{
+    width: 100%;
+}
+
+.categoriesFlex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .AllCategoriesDiv{
+        width: 100%;
+        
+    }
+}

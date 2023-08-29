@@ -1,0 +1,40 @@
+.User .profil img{
+    height: 200px;
+    border-radius: 5000000px;
+    width: 200px;
+    margin: 0 auto ;
+}
+
+.User .profil h2{
+    font-size: 2em;
+    padding: 10px;
+}
+
+.User .profil{
+    margin-top: 150px;
+}
+
+.comments{
+    display: flex;
+  }
+  
+.comments .comment{
+    width: 60%;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px 20px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .comments .comment{
+        width: 80%;
+        margin: 10px auto ;
+    }
+
+    .comments{
+        flex-direction: column;
+    }
+
+}

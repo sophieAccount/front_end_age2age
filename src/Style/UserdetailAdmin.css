@@ -1,0 +1,9 @@
+#UserdetailAdmin h4{
+    text-align: start;
+    margin: 40px;
+}
+
+#UserdetailAdmin button{
+    display: block;
+    margin: 20px ;
+}

@@ -1,0 +1,26 @@
+.MyAdvert{
+    
+}
+
+.toggle-btn-container{
+    width: 100%;
+}
+.toggle-btn-container button{
+    /* width: 50%; */
+    font-size: 1.5rem;
+    background-color: white;
+    border: 0px solid black;
+    cursor: grab;
+    padding: 10px;
+    margin: 20px;
+}
+
+.no-active{
+    background-color: #ebebeb!important;
+    color: black;
+}
+
+.MyAdvert .active{
+    border: 1px solid gray;
+    border-radius: 5px;
+}

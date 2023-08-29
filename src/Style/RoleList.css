@@ -1,0 +1,26 @@
+#conteneurRole{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#element{
+    margin-top: 100px;
+    min-width: 1400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+  
+@media (max-width: 768px) {
+    #element{
+        margin-top: 100px;
+        min-width: 400px;
+        
+    }
+    
+}
+  
+  

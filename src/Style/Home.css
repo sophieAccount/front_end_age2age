@@ -1,0 +1,43 @@
+.Home{
+}
+
+.MyAdverts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.Bienvenu{
+    font-size: 1.2em;
+    max-width: 35rem;
+    text-align: center;
+    margin: auto;
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head img{
+    width: 70px;
+    height: 70px;
+    border-radius: 1000px;
+}
+
+@media (max-width: 768px) {
+    .MyAdverts{
+        width: 80%;
+    }
+
+    body{
+        padding-top: 0px;
+    }
+}
