@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - recette
+      - production
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -50,13 +50,13 @@ jobs:
           username: ${{ secrets.SSH_USER_ANTOINE }}
           password: ${{ secrets.SSH_PASSWORD_ANTOINE }}
           script: |
-            cd /home/web/recette
+            cd /home/web/production
             docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
             docker pull ghcr.io/sophieaccount/front_end_age2age:${{ github.ref_name }}
-            docker stop recette_front || true  # Arrêter le conteneur existant s'il existe
-            docker rm recette_front || true    # Supprimer le conteneur existant s'il existe
+            docker stop production_front || true  # Arrêter le conteneur existant s'il existe
+            docker rm production_front || true    # Supprimer le conteneur existant s'il existe
             docker-compose up -d || docker compose up -d
-          #docker run -d --name recette_front -p 3000:3000 ghcr.io/sophieaccount/front_end_age2age:${{ github.ref_name }} 
+          #docker run -d --name production_front -p 3000:3000 ghcr.io/sophieaccount/front_end_age2age:${{ github.ref_name }} 
 
           # cd /home/web/age_age
             # git set-url origin https://github.com/sophieAccount/front_end_age2age.git
