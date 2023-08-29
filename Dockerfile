@@ -19,16 +19,13 @@ RUN npm install pm2 -g
 WORKDIR /app
 COPY . /app
 
+COPY .env /app/.env
+
 # Installation des dépendances et construction du projet
-ARG HOST_API=${HOST_API}
-RUN echo $HOST_API
-ENV HOST_API=$HOST_API
-RUN echo $HOST_API
 
 RUN touch /app/.env && \
-    echo "SKIP_PREFLIGHT_CHECK=true\nREACT_APP_MY_URL=$HOST_API" >> /app/.env
+    echo "SKIP_PREFLIGHT_CHECK=true" >> /app/.env
     
-RUN cat /app/.env
 
 RUN npm install
 RUN npm install express

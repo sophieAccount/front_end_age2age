@@ -16,6 +16,7 @@ jobs:
   #         npm run build
   build-and-push-image:
     runs-on: ubuntu-latest
+    env:
     # needs: [build]
     # if: github.ref_name == 'main'
     permissions:
@@ -38,8 +39,6 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/sophieaccount/front_end_age2age:${{ github.ref_name }}
-          build-agrs: |
-            "HOST_API=https://cube.nekshor.fr:4000"
   deploy:
     runs-on: ubuntu-latest
     needs: [build-and-push-image]
