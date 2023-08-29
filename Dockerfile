@@ -21,6 +21,7 @@ COPY . /app
 
 # Installation des dépendances et construction du projet
 ARG HOST_API=${HOST_API}
+RUN echo $HOST_API
 ENV HOST_API=$HOST_API
 RUN echo $HOST_API
 
