@@ -10,11 +10,9 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -yq nodejs
 
 # nvm
-RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-RUN ~/.nvm/nvm.sh
-RUN npm install -g n
-RUN nvm use 16
-
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+RUN /bin/bash -c "source ~/.nvm/nvm.sh && nvm install 16 && nvm use 16"
+RUN node -v
 # Installation de PM2
 RUN npm install pm2 -g
 # Définition du répertoire de travail et copie des fichiers
