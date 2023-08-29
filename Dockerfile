@@ -20,7 +20,7 @@ WORKDIR /app
 COPY . /app
 
 # Installation des dépendances et construction du projet
-ARG HOST
+ARG HOST=${HOST}
 ENV HOST=$HOST
 RUN echo $HOST
 
