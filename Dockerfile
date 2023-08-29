@@ -20,12 +20,12 @@ WORKDIR /app
 COPY . /app
 
 # Installation des dépendances et construction du projet
-ARG HOST=${HOST}
-ENV HOST=$HOST
-RUN echo $HOST
+ARG HOST_API=${HOST_API}
+ENV HOST_API=$HOST_API
+RUN echo $HOST_API
 
 RUN touch /app/.env && \
-    echo "SKIP_PREFLIGHT_CHECK=true\nREACT_APP_MY_URL=$HOST" >> /app/.env
+    echo "SKIP_PREFLIGHT_CHECK=true\nREACT_APP_MY_URL=$HOST_API" >> /app/.env
     
 RUN cat /app/.env
 
