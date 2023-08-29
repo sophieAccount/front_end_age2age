@@ -19,7 +19,7 @@ RUN npm install pm2 -g
 WORKDIR /app
 COPY . /app
 
-COPY .env /app/.env
+COPY .env* /app/.env
 
 # Installation des dépendances et construction du projet
 
