@@ -23,6 +23,7 @@ COPY . /app
 RUN npm install
 RUN npm install express
 RUN npm install typescript
+RUN npm install caniuse-lite
 RUN npm run build
 
 
