@@ -30,7 +30,6 @@ RUN npm install caniuse-lite
 RUN npm run build
 
 
-
 # Exposition du port
 EXPOSE 3000
 
