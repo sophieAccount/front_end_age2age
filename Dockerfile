@@ -24,7 +24,7 @@ ARG HOST
 ENV HOST=$HOST
 
 RUN touch /app/.env && \
-    echo 'SKIP_PREFLIGHT_CHECK=true\nREACT_APP_MY_URL = \$HOST' >> /app/.env
+    echo 'SKIP_PREFLIGHT_CHECK=true\nREACT_APP_MY_URL = $HOST' >> /app/.env
     
 RUN npm install
 RUN npm install express
