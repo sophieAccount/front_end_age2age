@@ -20,11 +20,15 @@ WORKDIR /app
 COPY . /app
 
 # Installation des dépendances et construction du projet
+RUN touch /app/.env && \
+    echo 'SKIP_PREFLIGHT_CHECK=true' >> /app/.env
+    
 RUN npm install
 RUN npm install express
 RUN npm install typescript
 RUN npm install caniuse-lite
 RUN npm run build
+
 
 
 # Exposition du port
