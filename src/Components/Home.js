@@ -22,7 +22,7 @@ function Home() {
     useEffect(() => {
         fetch(`https://${config}/adverts/nameAppli`)
             .then((res) => res.json())
-            .then((resData) => setNameAppli(resData[0].name));
+            .then((resData) => setNameAppli(resData));
     }, []);
 
     const myAdverts = data.map(data => {
