@@ -32,7 +32,7 @@ function Home() {
         <>
             <Container >
                 <div className="head">
-                    <h1 className="age2age">{NameAppli}</h1>
+                    <h1 className="age2age">{NameAppli.message}</h1>
                     <img src={logo} alt="logo"/>
                 </div>
                 <p className="Bienvenu">Bienvenue sur Age2Age ! Vous avez des difficultés à éffectuer certaines tâches du quotidien ? Ne vous inquitez pas, notre site est là pour vous aider. Poster votre demande de service et un citoyen y répondra !</p>
