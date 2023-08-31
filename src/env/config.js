@@ -1,4 +1,4 @@
-const api_url = "api.cube2.nekshor.fr"
+const api_url = "api.cube.nekshor.fr"
 export {
     api_url
 }
