@@ -11,11 +11,18 @@ import { useAuthContext } from "../Context/AuthProvider";
 function Home() {
     const [data, setAdvert] = useState([]);
     const { config } = useAuthContext();
+    const [NameAppli, setNameAppli] = useState("Age2Age");
 
     useEffect(() => {
         fetch(`https://${config}/adverts`)
             .then((res) => res.json())
             .then((resData) => setAdvert(resData));
+    }, []);
+
+    useEffect(() => {
+        fetch(`https://${config}/adverts/nameAppli`)
+            .then((res) => res.json())
+            .then((resData) => setNameAppli(resData));
     }, []);
 
     const myAdverts = data.map(data => {
@@ -25,7 +32,7 @@ function Home() {
         <>
             <Container >
                 <div className="head">
-                    <h1 className="age2age">Age2Age</h1>
+                    <h1 className="age2age">{NameAppli.message}</h1>
                     <img src={logo} alt="logo"/>
                 </div>
                 <p className="Bienvenu">Bienvenue sur Age2Age ! Vous avez des difficultés à éffectuer certaines tâches du quotidien ? Ne vous inquitez pas, notre site est là pour vous aider. Poster votre demande de service et un citoyen y répondra !</p>
